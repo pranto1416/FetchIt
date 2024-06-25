@@ -19,6 +19,9 @@ public class GameManager : MonoBehaviour
     public void WinCondition()
     {
         WinningPanel.SetActive(true);
+        UIManager.instance.gameUIPanel.SetActive(false);
+        Cursor.lockState = CursorLockMode.None;
+        Cursor.visible = true;
         Debug.Log("Done");
     }
 }
